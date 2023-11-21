@@ -33,7 +33,6 @@ public class Main {
             }
         } catch (Exception e) {
             res = "throws Exception";
-            //System.out.println("throws Exception");
         }
         return res;
     }
