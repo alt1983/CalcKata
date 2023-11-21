@@ -32,7 +32,8 @@ public class Main {
                 throw new Exception();
             }
         } catch (Exception e) {
-            System.out.println("throws Exception");
+            res = "throws Exception";
+            //System.out.println("throws Exception");
         }
         return res;
     }
@@ -96,8 +97,11 @@ public class Main {
         System.out.println("Введите выражение - для вычисления или exit - для выхода");
         Scanner scanner = new Scanner(System.in);
         String line = scanner.nextLine();
+        String res = "";
         while(!line.equals("exit")) {
-            System.out.println(calc(line));
+            res = calc(line);
+            System.out.println(res);
+            if(res.equals("throws Exception")) break;
             line = scanner.nextLine();
         }
     }
