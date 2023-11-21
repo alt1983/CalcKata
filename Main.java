@@ -1,3 +1,5 @@
+import java.util.Scanner;
+
 public class Main {
 
     public static String calc(String input) {
@@ -91,7 +93,12 @@ public class Main {
 
 
     public static void main(String[] args) {
-        System.out.println(calc("5 / 3"));
-        System.out.println(calc("X * II"));
+        System.out.println("Введите выражение - для вычисления или exit - для выхода");
+        Scanner scanner = new Scanner(System.in);
+        String line = scanner.nextLine();
+        while(!line.equals("exit")) {
+            System.out.println(calc(line));
+            line = scanner.nextLine();
+        }
     }
 }
